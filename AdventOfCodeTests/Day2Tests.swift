@@ -6,14 +6,22 @@
 import XCTest
 
 class Day2Tests: XCTestCase {
-    let day = Day2()
-
+    let sut = Day2()
+    let sutInput = """
+            forward 5
+            down 5
+            forward 8
+            up 3
+            down 8
+            forward 2
+            """
+    
     func testPart1() throws {
-        debugPrint(day.part1(""))
+        XCTAssertEqual(sut.part1(sutInput) as? Int, 150)
     }
-
+    
     func testPart2() throws {
-        debugPrint(day.part2(""))
+        XCTAssertEqual(sut.part2(sutInput) as? Int, 900)
     }
-
+    
 }
